@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "@inertiajs/react";
+import Show from "./Show.jsx";
 
 function Home({ budgets }) {
     return (
