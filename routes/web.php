@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
+use App\Http\Controllers\BudgetController;
 
-Route::get('/', function () {
-    return Inertia::Render('Home');
-});
+
+Route::get('/', [BudgetController::class, 'index']);
+Route::resource('/budget', BudgetController::class)->except('index');
