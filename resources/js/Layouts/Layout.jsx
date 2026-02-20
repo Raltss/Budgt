@@ -12,7 +12,7 @@ function Layout({ children }) {
 
 function Navbar() {
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-100 shadow-sm mb-4">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div
