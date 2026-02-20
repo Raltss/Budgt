@@ -12,7 +12,7 @@ function Layout({ children }) {
 
 function Navbar() {
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-100 shadow-sm mb-4">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div
@@ -53,7 +53,7 @@ function Navbar() {
                 </div>
             </div>
             <div className="navbar-center">
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <a className="btn btn-ghost text-xl">BUDGT</a>
             </div>
             <div className="navbar-end">
                 <button className="btn btn-ghost btn-circle">

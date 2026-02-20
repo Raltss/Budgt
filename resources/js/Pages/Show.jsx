@@ -1,9 +1,13 @@
 import React from "react";
 
-function Show() {
+function Show({ budget }) {
     return (
         <div>
-            <h1>hello world!</h1>
+            <ul>
+                <li> {budget.name} </li>
+                <li> {budget.start_date} </li>
+                <li> {budget.end_date} </li>
+            </ul>
         </div>
     );
 }
