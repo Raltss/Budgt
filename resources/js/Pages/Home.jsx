@@ -1,21 +1,32 @@
 import React from "react";
 import { Link } from "@inertiajs/react";
+import Modal from "../Components/Modals.jsx";
+import { useRef } from "react";
 
 function Home({ budgets }) {
+    const modalRef = useRef(null);
     return (
         <div className="flex justify-center items-center">
-            <BudgetList budgets={budgets} />
+            <BudgetList budgets={budgets} modalRef={modalRef} />
+            <Modal ref={modalRef} />
         </div>
     );
 }
 
-function BudgetList({ budgets }) {
+function BudgetList({ budgets, modalRef }) {
     return (
         <div>
-            <h1 className="text-center text-3xl font-bold mb-4">
-                {" "}
-                BUDGET LIST{" "}
-            </h1>
+            <div className="flex justify-between mb-4">
+                <h1 className="text-3xl font-bold mb-4"> BUDGET LIST </h1>
+                <button
+                    className="btn btn-neutral p-5"
+                    onClick={() => modalRef.current.showModal()}
+                >
+                    {" "}
+                    ADD BUDGET{" "}
+                </button>
+            </div>
+
             {budgets.map((budget, index) => (
                 <div key={budget.id}>
                     <ul className="list bg-base-100 rounded-box shadow-md border border-white p-3 mb-4 hover:border-slate-300/60 w-[70vw]">
